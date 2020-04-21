@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Validadores</title>
+</head>
+
+<body>
+	<div class="main">
+		<header>
+			<h1>Validadores em JavaScript</h1>
+		</header>
+		<section>
+			<div class="principal">
+				<table class="validadores">
+					<tr class="cpf">
+						<td class="doc">
+							<label for="cpf">CPF:</label>
+							<input type="text" name="cpf" id="cpf">
+							<button class="validar" onclick="validarCPF()">Validar</button>
+						</td>
+						<td class="res"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p id="modal">Texto do modão</p>
+				</div>
+			</div>
+		</section>
+		<footer>
+		</footer>
+
+	</div>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
