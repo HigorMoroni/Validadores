@@ -1,8 +1,16 @@
 const input = {
-    cpf: document.querySelector('input#cpf')
+    cpf: document.querySelector('input#cpf'),
+    rg: document.querySelector('input#rg'),
 }
 const resultado = {
-    cpf: document.querySelector('tr.cpf td.res')
+    cpf: document.querySelector('tr.cpf td.res'),
+    rg: document.querySelector('tr.rg td.res'),
+}
+function validarCNH() {
+
+}
+function validarCNPJ() {
+    
 }
 function validarCPF() {
     let pesoD1 = 10
@@ -31,6 +39,31 @@ function validarCPF() {
             resultado.cpf.style.color = 'red'
         }
     }
-    
 }
-
+function validarRG() {
+    let peso = 2
+    const rgLimpo = input.rg.value.replace(/\D+/g, '')
+    if (rgLimpo.length != 9) {
+        alert('RG digitado incorretamente')
+        input.rg.value = ''
+        input.rg.focus()
+    } else {
+        const rgArray = Array.from(rgLimpo)
+        const rgSemDigito = rgArray.slice(0, 8)
+        const somatoria = rgSemDigito.reduce((ac, val) => ac + Number(val) * peso++, 0)
+        function encontraDigito() {
+            const digito = String(11-(somatoria%11))
+            if (digito == '10') return 'X'
+            else if (digito == '11') return '0'
+            else return digito
+        }
+        const digito = encontraDigito()
+        if (digito == rgArray[8]) {
+            resultado.rg.innerHTML = 'Válido'
+            resultado.rg.style.color = 'green'
+        } else {
+            resultado.rg.innerHTML = 'Inválido'
+            resultado.rg.style.color = 'red'
+        }
+    }
+}

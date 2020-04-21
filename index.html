@@ -17,10 +17,28 @@
 		<section>
 			<div class="principal">
 				<table class="validadores">
+					<tr class="cnh">
+						<td class="doc"><label for="cnh">CNH:</label></td>
+						<td class="input"><input type="text" name="cnh" id="cnh" class="inputdoc" maxlength="11"></td>
+						<td class="button"><button class="validar" id="cnh" onclick="validarCNH()">VALIDAR</button></td>
+						<td class="res"></td>
+					</tr>
+					<tr class="cnpj">
+						<td class="doc"><label for="cnpj">CNPJ:</label></td>
+						<td class="input"><input type="text" name="cnpj" id="cnpj" class="inputdoc" maxlength="18"></td>
+						<td class="button"><button class="validar" id="cnpj" onclick="validarCNPJ()">VALIDAR</button></td>
+						<td class="res"></td>
+					</tr>
 					<tr class="cpf">
 						<td class="doc"><label for="cpf">CPF:</label></td>
-						<td class="input"><input type="text" name="cpf" id="cpf" class="inputdoc"></td>
-						<td class="button"><button class="validar" onclick="validarCPF()">VALIDAR</button></td>
+						<td class="input"><input type="text" name="cpf" id="cpf" class="inputdoc" maxlength="14"></td>
+						<td class="button"><button class="validar" id="cpf" onclick="validarCPF()">VALIDAR</button></td>
+						<td class="res"></td>
+					</tr>
+					<tr class="rg">
+						<td class="doc"><label for="rg">RG:</label></td>
+						<td class="input"><input type="text" name="rg" id="rg" class="inputdoc" maxlength="12"></td>
+						<td class="button"><button class="validar" id="rg" onclick="validarRG()">VALIDAR</button></td>
 						<td class="res"></td>
 					</tr>
 				</table>

@@ -42,9 +42,20 @@
     border: none;
     padding: 10px;
     color: #FFFFFF;
-    background-color: #cb2027;
     cursor: pointer;
     font-size:  0.7em;
+  }
+  button#rg{
+    background-color: #92b47d;
+  }
+  button#cpf{
+    background-color: #3a5fe1;
+  }
+  button#cnh{
+    background-color: #175161;
+  }
+  button#cnpj{
+    background-color: #8ce7fa;
   }
   
   /* The Modal (background) */
